@@ -1,0 +1,140 @@
+// header
+#header {
+  position: relative;
+  padding: 0 10px;
+  overflow: hidden;
+
+  .group-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+
+    a {
+      display: block;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url("../img/icon/logo.svg") no-repeat center;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .util-area {
+    display: flex;
+  }
+
+  .link-util {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 0 4px;
+
+    i[class^="ico-"] {
+      width: 32px;
+      height: 32px;
+      background-position: center;
+    }
+
+    .ico-search {
+      background-image: url("../img/icon/ico_search.svg");
+    }
+
+    .ico-cart {
+      background-image: url("../img/icon/ico_cart.svg");
+    }
+
+    .count {
+      position: absolute;
+      bottom: 9px;
+      right: -5px;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 3px;
+      border-radius: 10px;
+
+      font: {
+        family: "ProximaNova-Semibold", sans-serif;
+        size: 11px;
+      }
+
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+      background: #fa5500;
+    }
+  }
+}
+
+.sticky-nav {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.8125rem;
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  z-index: 10;
+
+  &.fixed {
+    border-bottom-color: #f2f2f2;
+  }
+}
+
+#gnb {
+  height: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gnb-list {
+    display: flex;
+    height: 100%;
+    box-sizing: content-box;
+  }
+
+  .gnb-item {
+    width: auto;
+    padding: 0 0.78125rem;
+
+    &:first-child {
+      padding-left: 1.25rem;
+    }
+  }
+
+  .link-gnb {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+
+    font: {
+      family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      weight: 700;
+      size: .875rem;
+    }
+
+    line-height: 2.8125rem;
+    white-space: nowrap;
+    text-align: center;
+
+    &.active::before {
+      content: '';
+      position: absolute;
+      top: 0.875rem;
+      right: -0.4375rem;
+      width: 0.25rem;
+      height: 0.25rem;
+      border-radius: 50%;
+      background-color: #fa5500;
+    }
+  }
+}
